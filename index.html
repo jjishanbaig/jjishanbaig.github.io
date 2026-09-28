@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jishan Baig | AI/ML Engineer | Python & Machine Learning</title>
+    <meta name="description" content="Jishan Baig is an AI/ML Engineer and Computer Science graduate focused on Python, machine learning, data analysis, predictive modeling, and time-series forecasting.">
+    <meta name="keywords" content="AI/ML Engineer, Machine Learning, Python, Data Analysis, Scikit-learn, Pandas, NumPy, Flask, Machine Learning Projects, AI Intern, ML Engineer Fresher">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090d16',
+                        darkCard: '#111827',
+                        accent: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .project-badge {
+            font-size: 0.68rem;
+            letter-spacing: 0.04em;
+        }
+
+        .workflow-card::after {
+            content: '→';
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(16, 185, 129, 0.8);
+            font-size: 1.5rem;
+        }
+
+        .workflow-card:last-child::after {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .workflow-card::after {
+                content: '↓';
+                right: 50%;
+                top: auto;
+                bottom: -20px;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 antialiased selection:bg-accent-500 selection:text-darkBg">
+    <header class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-white hover:text-accent-500 transition-colors">
+                Jishan<span class="text-accent-500">.Baig</span>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-5 xl:space-x-6 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-accent-500 transition-colors">Home</a>
+                <a href="#about" class="hover:text-accent-500 transition-colors">About</a>
+                <a href="#skills" class="hover:text-accent-500 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-accent-500 transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-accent-500 transition-colors">Experience</a>
+                <a href="#certifications" class="hover:text-accent-500 transition-colors">Certifications</a>
+                <a href="#articles" class="hover:text-accent-500 transition-colors">Articles</a>
+                <a href="#contact" class="hover:text-accent-500 transition-colors">Contact</a>
+                <a href="#resume" class="hover:text-accent-500 transition-colors">Resume</a>
+                <a href="https://github.com/JishanBaig" target="_blank" class="hover:text-accent-500 transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/jishan-baig-639082289/" target="_blank" class="px-4 py-2 border border-accent-500 text-accent-500 rounded-lg text-xs tracking-wider uppercase font-semibold hover:bg-accent-500/10 transition-all">
+                    LinkedIn <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                </a>
+            </nav>
+
+            <button id="menu-btn" class="lg:hidden text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle mobile menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-darkBg border-b border-slate-800 px-6 py-4 space-y-4">
+            <a href="#home" class="block text-slate-300 hover:text-accent-500 transition-colors">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-accent-500 transition-colors">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-accent-500 transition-colors">Skills</a>
+            <a href="#projects" class="block text-slate-300 hover:text-accent-500 transition-colors">Projects</a>
+            <a href="#experience" class="block text-slate-300 hover:text-accent-500 transition-colors">Experience</a>
+            <a href="#certifications" class="block text-slate-300 hover:text-accent-500 transition-colors">Certifications</a>
+            <a href="#articles" class="block text-slate-300 hover:text-accent-500 transition-colors">Articles</a>
+            <a href="#contact" class="block text-slate-300 hover:text-accent-500 transition-colors">Contact</a>
+            <a href="#resume" class="block text-slate-300 hover:text-accent-500 transition-colors">Resume</a>
+            <a href="https://github.com/JishanBaig" target="_blank" class="block text-slate-300 hover:text-accent-500 transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/jishan-baig-639082289/" target="_blank" class="inline-block px-4 py-2 border border-accent-500 text-accent-500 rounded-lg text-xs uppercase font-semibold hover:bg-accent-500/10 transition-all">
+                LinkedIn <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6">
+            <div class="max-w-5xl text-center">
+                <p class="code-font text-accent-500 text-sm tracking-widest uppercase mb-4">Hello, I'm</p>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6">Jishan Baig</h1>
+                <h2 class="text-xl md:text-3xl font-bold text-slate-300 mb-6">AI/ML Engineer | Python | Machine Learning | Data Analysis</h2>
+                <p class="max-w-3xl mx-auto text-slate-400 text-base md:text-lg mb-10 leading-relaxed">
+                    I build machine learning solutions and data-driven applications using Python, data analysis, feature engineering, and predictive modeling. My current focus includes supervised learning, classification, regression, time-series forecasting, and real-world AI/ML applications.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-darkBg font-bold rounded-xl shadow-lg shadow-accent-500/20 transition-all text-center">
+                        View My Projects
+                    </a>
+                    <a href="#resume" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-medium rounded-xl transition-all text-center">
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-medium rounded-xl transition-all text-center">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-3 text-xs md:text-sm text-slate-300">
+                    <span class="px-3 py-2 border border-slate-700 rounded-full bg-slate-900/60 code-font">Python</span>
+                    <span class="px-3 py-2 border border-slate-700 rounded-full bg-slate-900/60 code-font">Machine Learning</span>
+                    <span class="px-3 py-2 border border-slate-700 rounded-full bg-slate-900/60 code-font">Scikit-learn</span>
+                    <span class="px-3 py-2 border border-slate-700 rounded-full bg-slate-900/60 code-font">Pandas</span>
+                    <span class="px-3 py-2 border border-slate-700 rounded-full bg-slate-900/60 code-font">NumPy</span>
+                    <span class="px-3 py-2 border border-slate-700 rounded-full bg-slate-900/60 code-font">Flask</span>
+                    <span class="px-3 py-2 border border-slate-700 rounded-full bg-slate-900/60 code-font">SQL</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 px-6 bg-darkBg/50 border-t border-slate-900">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-7">
+                        <div class="flex items-center gap-4 mb-6">
+                            <h2 class="text-3xl font-bold text-white">About Me</h2>
+                            <div class="h-[1px] bg-slate-800 flex-grow"></div>
+                        </div>
+
+                        <div class="text-slate-400 space-y-4 leading-relaxed">
+                            <p>
+                                I am a Computer Science Engineering graduate with a strong interest in Artificial Intelligence and Machine Learning.
+                            </p>
+                            <p>
+                                I work with Python and its data science ecosystem to clean, analyze, visualize, and model real-world datasets. My current focus includes supervised learning, classification, regression, feature engineering, model evaluation, and time-series forecasting.
+                            </p>
+                            <p>
+                                I am currently gaining practical experience as an AI/ML Trainee Intern, where I am working with machine learning workflows including data preprocessing, model building, and evaluation.
+                            </p>
+                            <p>
+                                I enjoy solving data-driven problems and turning raw datasets into meaningful predictions and insights.
+                            </p>
+                            <p class="code-font text-sm text-accent-500">
+                                Current Focus: Machine Learning • Data Analysis • Predictive Modeling • Time Series
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative group">
+                            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-accent-500 to-emerald-600 opacity-30 group-hover:opacity-50 blur transition-all duration-300"></div>
+                            <div class="relative w-64 h-64 md:w-80 md:h-80 bg-slate-800 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-700 shadow-2xl shadow-accent-500/10">
+                                <i class="fa-solid fa-brain text-7xl text-accent-500 opacity-80"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 px-6 border-t border-slate-900">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-bold text-white">Skills</h2>
+                    <div class="h-[1px] bg-slate-800 flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-darkCard p-8 rounded-2xl border border-slate-800/80 hover:border-accent-500/30 transition-all">
+                        <div class="w-12 h-12 bg-accent-500/10 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-code text-accent-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-4">Python & Data</h3>
+                        <ul class="space-y-2 text-slate-400 code-font text-sm">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Python</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Pandas</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> NumPy</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Matplotlib</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> SQL</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Java</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> JavaScript</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-darkCard p-8 rounded-2xl border border-slate-800/80 hover:border-accent-500/30 transition-all">
+                        <div class="w-12 h-12 bg-accent-500/10 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-chart-line text-accent-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-4">Machine Learning</h3>
+                        <ul class="space-y-2 text-slate-400 code-font text-sm">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Scikit-learn</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Supervised Learning</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Classification</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Regression</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Feature Engineering</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Model Evaluation</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Time Series Analysis</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Forecasting</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-darkCard p-8 rounded-2xl border border-slate-800/80 hover:border-accent-500/30 transition-all">
+                        <div class="w-12 h-12 bg-accent-500/10 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-wrench text-accent-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-4">Development & Tools</h3>
+                        <ul class="space-y-2 text-slate-400 code-font text-sm">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Flask</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> REST APIs</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> SQLite</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Git</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> GitHub</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> Linux Basics</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full"></span> VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ml-workflow" class="py-24 px-6 bg-darkBg/50 border-t border-slate-900">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-bold text-white">Machine Learning Workflow</h2>
+                    <div class="h-[1px] bg-slate-800 flex-grow"></div>
+                </div>
+
+                <p class="max-w-3xl mx-auto text-center text-slate-400 mb-10 leading-relaxed">
+                    My approach focuses on understanding the data first, preparing reliable features, training appropriate models, evaluating their performance, and turning trained models into usable applications.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-9 gap-5">
+                    <div class="workflow-card relative bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">01</span>
+                        <h3 class="text-sm font-semibold text-white">Data Collection</h3>
+                    </div>
+                    <div class="workflow-card relative bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">02</span>
+                        <h3 class="text-sm font-semibold text-white">Data Cleaning</h3>
+                    </div>
+                    <div class="workflow-card relative bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">03</span>
+                        <h3 class="text-sm font-semibold text-white">Exploratory Data Analysis</h3>
+                    </div>
+                    <div class="workflow-card relative bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">04</span>
+                        <h3 class="text-sm font-semibold text-white">Feature Engineering</h3>
+                    </div>
+                    <div class="workflow-card relative bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">05</span>
+                        <h3 class="text-sm font-semibold text-white">Train/Test Split</h3>
+                    </div>
+                    <div class="workflow-card relative bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">06</span>
+                        <h3 class="text-sm font-semibold text-white">Model Training</h3>
+                    </div>
+                    <div class="workflow-card relative bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">07</span>
+                        <h3 class="text-sm font-semibold text-white">Model Evaluation</h3>
+                    </div>
+                    <div class="workflow-card relative bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">08</span>
+                        <h3 class="text-sm font-semibold text-white">Prediction</h3>
+                    </div>
+                    <div class="bg-darkCard border border-slate-800 rounded-2xl p-5 text-center hover:border-accent-500/40 transition-all">
+                        <span class="block text-xs code-font text-accent-500 font-bold mb-2">09</span>
+                        <h3 class="text-sm font-semibold text-white">Deployment / API</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 px-6 border-t border-slate-900">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-bold text-white">Featured AI/ML Projects</h2>
+                    <div class="h-[1px] bg-slate-800 flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article class="project-card bg-darkCard rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all flex flex-col justify-between overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-6 gap-4">
+                                <span class="code-font text-xs text-accent-500 font-bold uppercase tracking-wider">Machine Learning • Classification</span>
+                                <button type="button" class="project-toggle text-slate-400 hover:text-accent-500 transition-colors" data-project="churn">
+                                    <i class="fa-brands fa-github text-lg"></i>
+                                </button>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Customer Churn Prediction</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Building a machine learning model to predict customer churn using behavioral and usage data. The project includes data cleaning, exploratory analysis, feature engineering, classification modeling, and evaluation to identify customers at risk of leaving.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Python</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Pandas</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Scikit-learn</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Classification</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Machine Learning</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-slate-800">
+                                <span class="text-sm text-accent-500 font-medium">Status: In Progress</span>
+                                <button type="button" class="project-toggle inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm transition-colors" data-project="churn">
+                                    View Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card bg-darkCard rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all flex flex-col justify-between overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-6 gap-4">
+                                <span class="code-font text-xs text-accent-500 font-bold uppercase tracking-wider">Machine Learning • Regression</span>
+                                <button type="button" class="project-toggle text-slate-400 hover:text-accent-500 transition-colors" data-project="house-price">
+                                    <i class="fa-brands fa-github text-lg"></i>
+                                </button>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">House Price Prediction</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Building a regression-based machine learning model to predict house prices from property features. The project focuses on exploratory data analysis, feature engineering, and regression techniques for price estimation.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Python</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Pandas</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Scikit-learn</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Regression</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Machine Learning</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-slate-800">
+                                <span class="text-sm text-accent-500 font-medium">Status: In Progress</span>
+                                <button type="button" class="project-toggle inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm transition-colors" data-project="house-price">
+                                    View Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card bg-darkCard rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all flex flex-col justify-between overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-6 gap-4">
+                                <span class="code-font text-xs text-accent-500 font-bold uppercase tracking-wider">Time Series Analysis</span>
+                                <button type="button" class="project-toggle text-slate-400 hover:text-accent-500 transition-colors" data-project="stock-forecasting">
+                                    <i class="fa-brands fa-github text-lg"></i>
+                                </button>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Stock Price Forecasting</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Building a time-series forecasting project using historical stock data. The project focuses on analyzing trends and seasonality and applying forecasting techniques to model future price movements.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Python</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Pandas</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Time Series</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Forecasting</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Data Analysis</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-slate-800">
+                                <span class="text-sm text-accent-500 font-medium">Status: In Progress</span>
+                                <button type="button" class="project-toggle inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm transition-colors" data-project="stock-forecasting">
+                                    View Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card bg-darkCard rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all flex flex-col justify-between overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-6 gap-4">
+                                <span class="code-font text-xs text-accent-500 font-bold uppercase tracking-wider">Data Analysis</span>
+                                <button type="button" class="project-toggle text-slate-400 hover:text-accent-500 transition-colors" data-project="sales-analysis">
+                                    <i class="fa-brands fa-github text-lg"></i>
+                                </button>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Sales Data Analysis</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Analyzed sales datasets to clean data, identify trends and patterns, and create visualizations that surface meaningful business insights.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Python</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Pandas</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">NumPy</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Matplotlib</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Data Analysis</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-slate-800">
+                                <span class="text-sm text-accent-500 font-medium">Status: Personal Project</span>
+                                <button type="button" class="project-toggle inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm transition-colors" data-project="sales-analysis">
+                                    View Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card bg-darkCard rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all flex flex-col justify-between overflow-hidden md:col-span-2 lg:col-span-1">
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-6 gap-4">
+                                <span class="code-font text-xs text-accent-500 font-bold uppercase tracking-wider">Backend / API</span>
+                                <button type="button" class="project-toggle text-slate-400 hover:text-accent-500 transition-colors" data-project="student-api">
+                                    <i class="fa-brands fa-github text-lg"></i>
+                                </button>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Student Management REST API</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Built a REST API using Flask and SQLite to perform CRUD operations on student records, including endpoint design, request handling, and database schema implementation.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Python</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Flask</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">REST API</span>
+                                <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">SQLite</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pt-4 border-t border-slate-800">
+                                <span class="text-sm text-accent-500 font-medium">Status: Personal Project</span>
+                                <button type="button" class="project-toggle inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm transition-colors" data-project="student-api">
+                                    View Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-24 px-6 bg-darkBg/50 border-t border-slate-900">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-bold text-white">Experience</h2>
+                    <div class="h-[1px] bg-slate-800 flex-grow"></div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-darkCard rounded-2xl border border-accent-500/30 p-8 relative overflow-hidden">
+                        <div class="absolute left-0 top-0 h-full w-1 bg-accent-500"></div>
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">AI/ML Trainee Intern</h3>
+                                <p class="text-accent-500 font-medium">Technorizen Software Solutions</p>
+                            </div>
+                            <span class="code-font text-sm text-slate-300">Aug 2026 – Present</span>
+                        </div>
+                        <p class="text-slate-400 mb-5 leading-relaxed">
+                            Gaining hands-on experience in machine learning workflows, including data preprocessing, model building, and evaluation, as part of an AI/ML traineeship.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Machine Learning</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Python</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Data Preprocessing</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Model Building</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Model Evaluation</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-darkCard rounded-2xl border border-slate-800 p-8">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Full-Stack Developer Intern</h3>
+                                <p class="text-accent-500 font-medium">Amstech Group</p>
+                            </div>
+                            <span class="code-font text-sm text-slate-300">May 2025 – Nov 2025</span>
+                        </div>
+                        <p class="text-slate-400 mb-5 leading-relaxed">
+                            Developed Java-based full-stack web applications using Core Java, Servlets, JSP, JDBC, and MySQL; implemented CRUD operations and responsive UI components.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Java</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">JDBC</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">MySQL</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Servlets</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">JSP</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-darkCard rounded-2xl border border-slate-800 p-8">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Java Developer Intern</h3>
+                                <p class="text-accent-500 font-medium">Web Dev Technology</p>
+                            </div>
+                            <span class="code-font text-sm text-slate-300">Apr 2024 – Jun 2024</span>
+                        </div>
+                        <p class="text-slate-400 mb-5 leading-relaxed">
+                            Developed and debugged Java application modules, resolving runtime exceptions and applying OOP principles to build structured and maintainable code.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Java</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">OOP</span>
+                            <span class="project-badge code-font bg-slate-800 text-slate-300 px-3 py-1 rounded-md">Debugging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-24 px-6 border-t border-slate-900">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-bold text-white">Certifications</h2>
+                    <div class="h-[1px] bg-slate-800 flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-darkCard rounded-2xl border border-slate-800 p-8 hover:border-accent-500/40 transition-all">
+                        <div class="mb-5 w-12 h-12 bg-accent-500/10 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-award text-accent-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Oracle AI Foundations Associate</h3>
+                        <p class="text-slate-400 text-sm">AI fundamentals and foundational concepts in artificial intelligence.</p>
+                        <p class="mt-4 text-xs code-font text-slate-500">Certificate URL coming soon</p>
+                    </div>
+
+                    <div class="bg-darkCard rounded-2xl border border-slate-800 p-8 hover:border-accent-500/40 transition-all">
+                        <div class="mb-5 w-12 h-12 bg-accent-500/10 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-database text-accent-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Introduction to Databases — Coursera</h3>
+                        <p class="text-slate-400 text-sm">Database concepts, data models, and practical querying fundamentals.</p>
+                        <p class="mt-4 text-xs code-font text-slate-500">Certificate URL coming soon</p>
+                    </div>
+
+                    <div class="bg-darkCard rounded-2xl border border-slate-800 p-8 hover:border-accent-500/40 transition-all">
+                        <div class="mb-5 w-12 h-12 bg-accent-500/10 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-code text-accent-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Java Full Stack Development — Coursera</h3>
+                        <p class="text-slate-400 text-sm">Full-stack Java application development concepts and workflows.</p>
+                        <p class="mt-4 text-xs code-font text-slate-500">Certificate URL coming soon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="currently-exploring" class="py-24 px-6 bg-darkBg/50 border-t border-slate-900">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-bold text-white">Currently Exploring</h2>
+                    <div class="h-[1px] bg-slate-800 flex-grow"></div>
+                </div>
+
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-3 border border-slate-700 rounded-full bg-slate-900/70 text-slate-200 code-font text-sm">Machine Learning</span>
+                    <span class="px-4 py-3 border border-slate-700 rounded-full bg-slate-900/70 text-slate-200 code-font text-sm">Deep Learning</span>
+                    <span class="px-4 py-3 border border-slate-700 rounded-full bg-slate-900/70 text-slate-200 code-font text-sm">Model Deployment</span>
+                    <span class="px-4 py-3 border border-slate-700 rounded-full bg-slate-900/70 text-slate-200 code-font text-sm">Generative AI</span>
+                    <span class="px-4 py-3 border border-slate-700 rounded-full bg-slate-900/70 text-slate-200 code-font text-sm">MLOps</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="articles" class="py-24 px-6 border-t border-slate-900">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-bold text-white">AI/ML Articles & Notes</h2>
+                    <div class="h-[1px] bg-slate-800 flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <article class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all">
+                        <span class="text-xs text-slate-500 code-font">Machine Learning Fundamentals</span>
+                        <h3 class="text-lg font-bold text-white mt-3 mb-3">What is Machine Learning?</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Understanding the basics of learning from data and building predictive systems.</p>
+                        <button type="button" class="text-accent-500 font-medium code-font text-sm">Read Note →</button>
+                    </article>
+
+                    <article class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all">
+                        <span class="text-xs text-slate-500 code-font">Machine Learning</span>
+                        <h3 class="text-lg font-bold text-white mt-3 mb-3">Classification vs Regression</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Understanding when to use classification models and when to predict continuous values.</p>
+                        <button type="button" class="text-accent-500 font-medium code-font text-sm">Read Note →</button>
+                    </article>
+
+                    <article class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all">
+                        <span class="text-xs text-slate-500 code-font">Data Preprocessing</span>
+                        <h3 class="text-lg font-bold text-white mt-3 mb-3">Complete Machine Learning Data Preprocessing Workflow</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">A practical approach to cleaning, transforming, and validating datasets before model training.</p>
+                        <button type="button" class="text-accent-500 font-medium code-font text-sm">Read Note →</button>
+                    </article>
+
+                    <article class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all">
+                        <span class="text-xs text-slate-500 code-font">Machine Learning</span>
+                        <h3 class="text-lg font-bold text-white mt-3 mb-3">What is Feature Engineering?</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Improving model quality by designing meaningful input variables from raw data.</p>
+                        <button type="button" class="text-accent-500 font-medium code-font text-sm">Read Note →</button>
+                    </article>
+
+                    <article class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all">
+                        <span class="text-xs text-slate-500 code-font">Time Series</span>
+                        <h3 class="text-lg font-bold text-white mt-3 mb-3">Time Series Analysis Explained</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Understanding trends, seasonality, and forecastability in time-based data.</p>
+                        <button type="button" class="text-accent-500 font-medium code-font text-sm">Read Note →</button>
+                    </article>
+
+                    <article class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:border-accent-500/40 transition-all">
+                        <span class="text-xs text-slate-500 code-font">Machine Learning Project</span>
+                        <h3 class="text-lg font-bold text-white mt-3 mb-3">How Customer Churn Prediction Works</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">A practical look at using behavioral patterns to predict customer retention risk.</p>
+                        <button type="button" class="text-accent-500 font-medium code-font text-sm">Read Note →</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 px-6 bg-darkBg/50 border-t border-slate-900">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Let's Build Something Intelligent</h2>
+                <p class="text-slate-400 text-sm max-w-lg mx-auto mb-10 leading-relaxed">
+                    Interested in AI/ML projects, internships, collaborations, or opportunities? Feel free to get in touch.
+                </p>
+
+                <form class="space-y-4 max-w-xl mx-auto text-left mb-12">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs code-font text-slate-400 mb-2">Name</label>
+                            <input type="text" placeholder="Your Name" class="w-full bg-darkCard border border-slate-800 focus:border-accent-500 focus:outline-none rounded-lg px-4 py-3 text-slate-200 text-sm transition-all" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs code-font text-slate-400 mb-2">Email</label>
+                            <input type="email" placeholder="you@example.com" class="w-full bg-darkCard border border-slate-800 focus:border-accent-500 focus:outline-none rounded-lg px-4 py-3 text-slate-200 text-sm transition-all" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs code-font text-slate-400 mb-2">Message</label>
+                        <textarea rows="5" placeholder="Hi Jishan, I would like to discuss an AI/ML opportunity..." class="w-full bg-darkCard border border-slate-800 focus:border-accent-500 focus:outline-none rounded-lg px-4 py-3 text-slate-200 text-sm transition-all" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 bg-accent-500 hover:bg-accent-600 text-darkBg font-bold rounded-lg transition-all text-sm uppercase tracking-wider">
+                        Send Message
+                    </button>
+                </form>
+
+                <div class="flex justify-center items-center gap-6 text-xl text-slate-400 mb-8">
+                    <a href="https://github.com/JishanBaig" target="_blank" class="hover:text-accent-500 transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jishan-baig-639082289/" target="_blank" class="hover:text-accent-500 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <div id="resume" class="flex justify-center">
+                    <a href="#" class="inline-flex items-center gap-3 px-8 py-4 bg-accent-500 hover:bg-accent-600 text-darkBg font-bold rounded-xl shadow-lg shadow-accent-500/20 transition-all">
+                        <i class="fa-solid fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+                <!-- Add actual resume PDF URL/path here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-900">
+        <p>&copy; 2026 Jishan Baig. Built with Python, Machine Learning, curiosity, and code.</p>
+    </footer>
+
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 p-4">
+        <div class="bg-darkCard border border-slate-800 rounded-2xl w-full max-w-2xl max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex items-center justify-between p-5 border-b border-slate-800">
+                <h3 id="modal-title" class="text-xl font-bold text-white">Project Details</h3>
+                <button id="close-modal" type="button" class="text-slate-400 hover:text-white text-2xl" aria-label="Close project details">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="modal-content" class="p-6 text-slate-300 space-y-5"></div>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const projectData = {
+            churn: {
+                title: 'Customer Churn Prediction',
+                category: 'Machine Learning • Classification',
+                problem: 'Predict customer churn using behavioral and usage data to identify customers at risk of leaving.',
+                dataset: 'Behavioral and usage data relevant to customer activity and engagement patterns.',
+                preprocessing: 'Data cleaning, handling missing values, and preparing structured inputs for modeling.',
+                eda: 'Exploratory analysis to understand patterns in customer behavior and relationships within the data.',
+                featureEngineering: 'Feature engineering to create meaningful inputs that improve model learning and prediction quality.',
+                model: 'Classification modeling using supervised learning techniques suitable for churn prediction.',
+                evaluation: 'Model evaluation using appropriate classification metrics and validation strategies to assess performance.',
+                technology: ['Python', 'Pandas', 'Scikit-learn', 'Classification', 'Machine Learning'],
+                github: 'Repository URL to be added.'
+            },
+            'house-price': {
+                title: 'House Price Prediction',
+                category: 'Machine Learning • Regression',
+                problem: 'Predict house prices from property features using regression-based machine learning techniques.',
+                dataset: 'Property feature data used for price estimation.',
+                preprocessing: 'Data cleaning and preparation to make the property dataset consistent for model training.',
+                eda: 'Exploratory data analysis to identify relationships between property features and price patterns.',
+                featureEngineering: 'Feature engineering to highlight influential property attributes for price prediction.',
+                model: 'Regression techniques selected for estimating continuous property values.',
+                evaluation: 'Evaluation of model performance using appropriate regression validation metrics.',
+                technology: ['Python', 'Pandas', 'Scikit-learn', 'Regression', 'Machine Learning'],
+                github: 'Repository URL to be added.'
+            },
+            'stock-forecasting': {
+                title: 'Stock Price Forecasting',
+                category: 'Time Series Analysis',
+                problem: 'Forecast future stock price movements using historical time-series data and trend analysis.',
+                dataset: 'Historical stock data used to analyze trends and seasonality.',
+                preprocessing: 'Time-series data preparation, cleaning, and structuring for forecasting workflows.',
+                eda: 'Exploratory analysis of trends, cyclic patterns, and seasonality in historical prices.',
+                featureEngineering: 'Feature engineering based on time-based signals and historical patterns relevant to forecasting.',
+                model: 'Time-series forecasting techniques designed to model future price movements.',
+                evaluation: 'Evaluation of forecast quality through relevant time-series validation methods.',
+                technology: ['Python', 'Pandas', 'Time Series', 'Forecasting', 'Data Analysis'],
+                github: 'Repository URL to be added.'
+            },
+            'sales-analysis': {
+                title: 'Sales Data Analysis',
+                category: 'Data Analysis',
+                problem: 'Analyze sales datasets to uncover trends, patterns, and business insights from raw transactional data.',
+                dataset: 'Sales dataset used for analysis and visualization.',
+                preprocessing: 'Data cleaning and transformation to prepare the dataset for analysis.',
+                eda: 'Exploratory analysis to identify trends, patterns, and relationships in sales metrics.',
+                featureEngineering: 'Feature preparation to support meaningful analysis and reporting.',
+                model: 'No formal predictive model specified; emphasis is on analysis and visualization.',
+                evaluation: 'Insight validation based on observed patterns and business-oriented analysis.',
+                technology: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Data Analysis'],
+                github: 'Repository URL to be added.'
+            },
+            'student-api': {
+                title: 'Student Management REST API',
+                category: 'Backend / API',
+                problem: 'Provide CRUD operations for student records through a simple and maintainable REST API.',
+                dataset: 'Student record data stored in SQLite for application use.',
+                preprocessing: 'Schema design and data handling for consistent record storage and retrieval.',
+                eda: 'Database structure reviewed to support clean endpoint design and data flow.',
+                featureEngineering: 'Data model definition for standardized student records and API payload handling.',
+                model: 'REST API design with Flask for endpoint-based interaction and database operations.',
+                evaluation: 'Functional validation of CRUD operations and request handling behavior.',
+                technology: ['Python', 'Flask', 'REST API', 'SQLite'],
+                github: 'Repository URL to be added.'
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        function openProjectDetails(projectKey) {
+            const project = projectData[projectKey];
+            if (!project) return;
+
+            modalTitle.textContent = project.title;
+            const detailSections = [
+                ['Problem', project.problem],
+                ['Dataset / Data', project.dataset],
+                ['Preprocessing', project.preprocessing],
+                ['EDA', project.eda],
+                ['Feature Engineering', project.featureEngineering],
+                ['Model / Technique', project.model],
+                ['Evaluation', project.evaluation],
+                ['Technology Stack', project.technology.join(', ')],
+                ['GitHub', project.github]
+            ].filter(([, value]) => value && value !== 'undefined');
+
+            modalContent.innerHTML = detailSections.map(([label, value]) => `
+                <div>
+                    <h4 class="text-sm uppercase tracking-wider text-accent-500 code-font mb-2">${label}</h4>
+                    <p class="text-slate-300 leading-relaxed">${value}</p>
+                </div>
+            `).join('');
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProjectDetails() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.querySelectorAll('.project-toggle').forEach(button => {
+            button.addEventListener('click', function () {
+                const projectKey = this.dataset.project;
+                openProjectDetails(projectKey);
+            });
+        });
+
+        closeModalBtn.addEventListener('click', closeProjectDetails);
+        modal.addEventListener('click', function (event) {
+            if (event.target === modal) {
+                closeProjectDetails();
+            }
+        });
+    </script>
+</body>
+</html>
